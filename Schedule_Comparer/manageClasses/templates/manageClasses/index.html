@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+</head>
+<body>
+
+<h3>All Students</h3>
+    <ul>
+        {% for stud in all_students %}
+        <li><a href="/manageclasses/{{ stud.name }}/">{{ stud.name }}</a></li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
