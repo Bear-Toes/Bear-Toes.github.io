@@ -10,6 +10,10 @@ def index(request):
 def detail(request, name):
     try:
         stud = Student.objects.get(name=name)
+        context = {
+            'student': stud,
+            'classList': stud.fssclass_set.all()
+        }
     except stud.DoesNotExist:
         raise Http404("Student Does Not Exist")
-    return render(request, 'manageClasses/detail.html', {'student': stud})
+    return render(request, 'manageClasses/detail.html', context)

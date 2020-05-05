@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Student List</title>
+    <title>{{ student }}</title>
 </head>
 <body>
 
-<h3>All Students</h3>
-<h4>{{ student }}</h4>
+<h2>{{ student }}</h2>
+<h3>
+    <ul>
+        {% for class in classList %}
+        <li>{{ class }}</li>
+        {% endfor %}
+    </ul>
+</h3>
 
 </body>
 </html>
